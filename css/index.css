@@ -28,63 +28,7 @@ figcaption {
 
 body,
 html {
-  background: rgba(243, 226, 199);
-  background: -moz-linear-gradient(
-    top,
-    rgba(243, 226, 199, 1) 6%,
-    rgba(243, 226, 199, 1) 15%,
-    rgba(232, 192, 128, 1) 32%,
-    rgba(230, 176, 95, 1) 51%,
-    rgba(255, 175, 54, 1) 85%,
-    rgba(255, 175, 54, 1) 100%
-  );
-  background: -webkit-gradient(
-    left top,
-    left bottom,
-    color-stop(6%, rgba(243, 226, 199, 1)),
-    color-stop(15%, rgba(243, 226, 199, 1)),
-    color-stop(32%, rgba(232, 192, 128, 1)),
-    color-stop(51%, rgba(230, 176, 95, 1)),
-    color-stop(85%, rgba(255, 175, 54, 1)),
-    color-stop(100%, rgba(255, 175, 54, 1))
-  );
-  background: -webkit-linear-gradient(
-    top,
-    rgba(243, 226, 199, 1) 6%,
-    rgba(243, 226, 199, 1) 15%,
-    rgba(232, 192, 128, 1) 32%,
-    rgba(230, 176, 95, 1) 51%,
-    rgba(255, 175, 54, 1) 85%,
-    rgba(255, 175, 54, 1) 100%
-  );
-  background: -o-linear-gradient(
-    top,
-    rgba(243, 226, 199, 1) 6%,
-    rgba(243, 226, 199, 1) 15%,
-    rgba(232, 192, 128, 1) 32%,
-    rgba(230, 176, 95, 1) 51%,
-    rgba(255, 175, 54, 1) 85%,
-    rgba(255, 175, 54, 1) 100%
-  );
-  background: -ms-linear-gradient(
-    top,
-    rgba(243, 226, 199, 1) 6%,
-    rgba(243, 226, 199, 1) 15%,
-    rgba(232, 192, 128, 1) 32%,
-    rgba(230, 176, 95, 1) 51%,
-    rgba(255, 175, 54, 1) 85%,
-    rgba(255, 175, 54, 1) 100%
-  );
-  background: linear-gradient(
-    to bottom,
-    rgba(243, 226, 199, 1) 6%,
-    rgba(243, 226, 199, 1) 15%,
-    rgba(232, 192, 128, 1) 32%,
-    rgba(230, 176, 95, 1) 51%,
-    rgba(255, 175, 54, 1) 85%,
-    rgba(255, 175, 54, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', endColorstr='#ffaf36', GradientType=0 );
+  background-image: url("../images/BG.png");
 }
 
 main {
@@ -106,8 +50,26 @@ main {
 
 .navbar-top {
   display: flex;
+  flex-direction: row;
+  flex: 1;
   background: linear-gradient(180deg, #3d0b00 91%, rgba(243, 226, 199, 1) 100%);
   height: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+.voltar {
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  margin-left: 25px;
+  margin-top: 10px;
+  cursor: pointer;
+  left: 0;
+  top: 0;
+  position: absolute;
+  font-size: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -117,14 +79,17 @@ main {
   width: auto;
   max-width: max-content;
   text-align: center;
-  background-color: #975b27;
-  border-radius: 0 5px 5px 0;
+  background-image: url("../images/BGl.png");
+  background-size: 90vh;
+  background-repeat: no-repeat;
+  border-radius: 0 10px 10px 0;
   margin: 25px 25px 0 0;
   top: 25px;
   position: sticky;
 }
 
 .navbar-top-logo {
+  display: flex;
   color: white;
   font-family: "roboto";
   font-style: oblique;
@@ -135,10 +100,11 @@ main {
 }
 
 .navbar-left-logo {
-  font-family: roboto;
   background-color: wheat;
-  border: solid 1px black;
-  border-radius: 50px;
+  border: 1px solid black;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
   margin: 10px;
 }
 
@@ -171,6 +137,9 @@ div.galery {
 }
 
 div.gallery-pic {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   margin: 15px;
   margin-top: 20px;
   border: 2px solid #ccc;
@@ -191,13 +160,18 @@ div.gallery-pic:hover {
 
 div.gallery-pic img {
   width: 100%;
+  min-height: 265px;
   height: auto;
 }
 
 div.desc {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   background-color: antiquewhite;
   padding: 11px;
   text-align: center;
+  justify-content: flex-end;
 }
 
 .footer {
@@ -227,5 +201,11 @@ div.desc {
     float: none;
     height: 280px;
     width: 130px;
+  }
+
+  div.gallery-pic img {
+    width: 100%;
+    min-height: 200px;
+    height: auto;
   }
 }
