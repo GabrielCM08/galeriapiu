@@ -146,10 +146,11 @@ main {
 }
 
 div.galery {
-  border: 3px solid white;
-  border-radius: 7px;
-  width: 90vw;
-  margin: 40px 40px 40px 10px;
+  padding: 80px 150px 80px 150px;
+  background-image: url("../images/GALBG.png");
+  margin: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 div.gallery-pic {
@@ -198,6 +199,7 @@ div.desc {
   color: #fff;
   text-align: center;
   padding: 10px;
+  margin-top: 60px;
 }
 
 .pixel img {
